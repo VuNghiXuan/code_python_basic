@@ -1,0 +1,76 @@
+#Kiểm tra version git
+git --version
+
+#Tạo thư mục trong git
+git config --global user.name "codeRePoVuNghiXuan"
+
+#Nhập email
+git config --global user.email "vunghixuan.info@gmail.com"
+
+#Xem kết quả
+git config --list
+
+#Chuyển thư mục cần tạo init
+D:\ThanhVu\code
+
+#Khởi tạo trong thư mục
+D:\ThanhVu\code>git init
+>>>Initialized empty Git repository in D:/ThanhVu/code/.git/ (Thư mục dc khởi tạo là empty)
+
+#Điều khiển, giám sát và add địa chỉ web gốc; origin: gốc
+git remote add origin https://github.com/VuNghiXuan/data_code.git
+
+#Mở code (VSC)
+code .
+
+#add file lên git
+git add init_git.txt
+
+#Ký thác cho git (git commit --m "decripive message")
+git commit --m "Thực hiện commit"
+>>>[master (root-commit) e1e993b] Thực hiện commit
+
+#Thay đổi mô tả
+git --amend --m "Thay đổi nội dung"
+
+#Đưa tất cả file local ủy thác cho Github
+git push origin master
+
+#Gõ passWord vào
+
+#Thay đổi và cập nhật chỉnh sửa (Chưa thấy kết quả)
+code>git add .
+
+#commit lại
+git commit --m "Thêm thông tin từ dòng 40"
+
+#Đẩy lên lại master: tất cả file local ủy thác cho Github
+git push origin master
+
+#So sánh sự thay đổi giữa các phiên bản commit
+git diff d0475 ef45116
+>>> dấu - nghĩa là phiên bản bị bỏ dòng này
+
+#lod ra lịch sử trên các branch
+git log
+
+#Hiển thị mỗi commit trên 1 dòng
+got log --oneline
+
+
+####### toi đay loi
+
+######## https://www.youtube.com/watch?v=z-BDl0SBtgo&t=744s
+
+
+Clone
+
+Câu lệnh Git này dùng để copy 1 project từ Local Respository đến một thư mục khác, hoặc từ server về máy tính của bạn.
+Để clone một project từ Local Respository trên máy:
+git clone /path/to/repository/
+Để clone một project trên server, bạn có thể sử dụng https hoặc ssh:
+
+    https:
+    git clone username@serverAddress:/path/to/project
+    ssh:
+    git clone ssh://username@serverAddress/path/to/project
